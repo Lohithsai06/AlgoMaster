@@ -1,20 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  BookOpen,
-  Brain,
-  Code2,
-  Eye,
-  Flame,
-  GraduationCap,
-  Lightbulb,
-  Play,
-  Sparkles,
-  Target,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight, BookOpen, Brain, Code as Code2, Eye, Flame, GraduationCap, Lightbulb, Play, Sparkles, Target, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
