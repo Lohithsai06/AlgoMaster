@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight, BookOpen, Brain, Code as Code2, Eye, Flame, GraduationCap, Lightbulb, Play, Sparkles, Target, TrendingUp } from "lucide-react";
 export default function Home() {
   return (
@@ -102,13 +103,13 @@ export default function Home() {
                 <Play className="h-5 w-5" />
                 Start Your Journey
               </a>
-              <a
+              <Link
                 href="/learn"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-subheading font-medium text-foreground shadow-sm transition-all hover:border-border-strong hover:bg-background-subtle active:scale-95"
               >
                 <BookOpen className="h-5 w-5" />
                 Explore Roadmap
-              </a>
+              </Link>
             </motion.div>
         </div>
       </section>
@@ -143,13 +144,13 @@ export default function Home() {
                       Complete
                     </p>
                   </div>
-                  <a
+                  <Link
                     href="/learn"
                     className="inline-flex items-center gap-1.5 rounded-lg bg-primary-500 px-4 py-2 text-caption font-medium text-white transition-all hover:bg-primary-600 active:scale-95"
                   >
                     Resume
                     <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/* Progress bar */}
