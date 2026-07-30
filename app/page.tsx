@@ -2,15 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Brain, Code as Code2, Eye, Flame, GraduationCap, Lightbulb, Play, Sparkles, Target, TrendingUp } from "lucide-react";
-import { useEffect, useState } from "react";
-
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div className="flex flex-col flex-1">
       {/* Navigation */}
@@ -63,8 +55,7 @@ export default function Home() {
         </div>
 
         <div className="mx-auto flex max-w-4xl flex-col items-center pt-24 pb-16 text-center">
-          {mounted && (
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -73,10 +64,8 @@ export default function Home() {
               <Sparkles className="h-3.5 w-3.5 text-accent-500" />
               The interactive DSA learning ecosystem
             </motion.div>
-          )}
 
-          {mounted && (
-            <motion.h1
+          <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -88,10 +77,8 @@ export default function Home() {
                 Thinking, Not Memorization
               </span>
             </motion.h1>
-          )}
 
-          {mounted && (
-            <motion.p
+          <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -101,10 +88,8 @@ export default function Home() {
               interaction, and practice. A guided journey from beginner to
               interview-ready, built for humans who want to truly understand.
             </motion.p>
-          )}
 
-          {mounted && (
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -125,15 +110,13 @@ export default function Home() {
                 Explore Roadmap
               </a>
             </motion.div>
-          )}
         </div>
       </section>
 
       {/* Continue Where You Left Off Card */}
       <section className="px-6">
         <div className="mx-auto max-w-4xl">
-          {mounted && (
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -179,7 +162,6 @@ export default function Home() {
                 />
               </div>
             </motion.div>
-          )}
         </div>
       </section>
 
@@ -230,8 +212,7 @@ export default function Home() {
               },
             ].map((step, index) => (
               <div key={step.label} className="relative">
-                {mounted && (
-                  <motion.div
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
@@ -249,7 +230,6 @@ export default function Home() {
                       {step.label}
                     </span>
                   </motion.div>
-                )}
                 {/* Connector arrow */}
                 {index < 4 && (
                   <div className="absolute -right-2 top-1/2 hidden -translate-y-1/2 lg:block">
@@ -327,8 +307,7 @@ export default function Home() {
               },
             ].map((feature, index) => (
               <div key={feature.title}>
-                {mounted && (
-                  <motion.div
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
@@ -347,7 +326,6 @@ export default function Home() {
                       {feature.description}
                     </p>
                   </motion.div>
-                )}
               </div>
             ))}
           </div>
@@ -395,8 +373,7 @@ export default function Home() {
               },
             ].map((node, index) => (
               <div key={node.title} className="flex flex-col items-center">
-                {mounted && (
-                  <motion.div
+                <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -427,7 +404,6 @@ export default function Home() {
                       {node.status}
                     </span>
                   </motion.div>
-                )}
                 {index < 4 && (
                   <div className="h-6 w-px bg-border-strong" />
                 )}
